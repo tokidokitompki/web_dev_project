@@ -1,0 +1,63 @@
+img{
+    width:250px;
+    border-radius:100px;
+    float: left;
+    margin-right: 10px; 
+    padding: 10px; 
+}
+h1{
+color:rgb(31, 53, 53);
+font-family: Georgia;
+font-size: 300%;
+text-align: center;
+}
+h2{
+color:rgb(31, 53, 53);
+font-family: Georgia;
+font-size: 150%;
+text-align: center;
+}
+#paragraph1{
+color:black;
+font-family: Verdana;
+font-size: 100%;
+text-align: center;
+border-style: solid;
+border-width: 5px;
+border-color: green; 
+border-radius: 10px; 
+padding: 15px; 
+margin-left: 75px;
+
+}
+#paragraph2{
+    color:black;
+    font-family: Verdana;
+    font-size: 100%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: green;
+    border-radius: 10px;
+    padding: 5px; 
+    text-align: center;
+}
+
+#paragraph3{
+    color:black;
+    font-family: Verdana;
+    font-size: 100%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: green;
+    border-radius: 10px;
+    padding: 5px; 
+    text-align: center;
+}
+
+body{
+background-image: url(images/plant-2004483_1280.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed; 
+background-size: cover;
+margin: 20px;
+}
