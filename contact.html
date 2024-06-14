@@ -10,7 +10,16 @@
             font-family: Georgia;
             font-size: 175%;
             text-align: center;
-
+        }
+        .form-row{
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .form-input{
+            text-align: center;
+        }
+        .submit{
+            text-align: center; 
         }
     </style>
 </head>
@@ -19,8 +28,26 @@
     <a href="/about.html">About Me</a>
 
     <h2>Contact Me!</h2>
-
-
+    <form id="contact-form" method="POST" action="sendmail.php">
+        <div class="form-row form-error" style="display:none;"></div>
+        <div class="form-row">
+          <label for="contact-form-name">Name:</label>
+          <input id="contact-form-name" class="form-input" type="text" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="contact-form-email">Email:</label>
+          <input id="contact-form-email" class="form-input" type="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="contact-form-phone">Phone:</label>
+          <input id="contact-form-phone" class="form-input" type="tel" name="phone">
+        </div>
+        <div class="form-row">
+          <label for="contact-form-comment">Comment:</label>
+          <textarea id="contact-form-comment" class="form-input" name="comment" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
 
 
     <a href="#">Return to Top of Page</a>
