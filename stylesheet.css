@@ -4,6 +4,7 @@ img{
     float: left;
     margin-right: 10px; 
     padding: 10px; 
+    background-position: 10px 15px;
 }
 h1{
 color:rgb(31, 53, 53);
