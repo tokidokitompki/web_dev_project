@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
+    <link rel="stylesheet" href="stylesheet.css">
     <style>
         h2{
             color:rgb(31, 53, 53);
@@ -15,15 +16,12 @@
             margin-bottom: 10px;
             text-align: center;
         }
-        .form-input{
-            text-align: center;
-        }
+      
        body{
         background-image: url(images/flowersbackground.webp);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-        text-align: center;
         font-family: Georgia; 
         color: rgb(31, 53, 53);
         font-size: 100%;
@@ -34,30 +32,32 @@
     <a href="/index.html">Home Page</a>
     <a href="/about.html">About Me</a>
 
-    <h2>Contact Me!</h2>
-    <form id="contact-form" method="POST" action="sendmail.php">
-        <div class="form-row form-error" style="display:none;"></div>
-        <div class="form-row">
-          <label for="contact-form-name">Your Name:</label>
-          <input id="contact-form-name" class="form-input" type="text" name="name" required>
-        </div>
-        <div class="form-row">
-          <label for="contact-form-email">Your Email:</label>
-          <input id="contact-form-email" class="form-input" type="email" name="email" required>
-        </div>
-        <div class="form-row">
-          <label for="contact-form-phone">Your Phone Number:</label>
-          <input id="contact-form-phone" class="form-input" type="tel" name="phone">
-        </div>
-        <div class="form-row">
-          <label for="contact-form-comment">Your Comments:</label>
-          <textarea id="contact-form-comment" class="form-input" name="comment" required></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    
-
-
+    <h2>Want to Contact Me?</h2>
+    <form action="/submit-form" method="post">
+      <label for="username">Your Name: </label>
+      <input type="text" id="username" name="username" required>
+      <label for="email">Your Email: </label>
+      <input type="email" id="email" name="email" required>
+      <label for="phone">Your Phone Number: </label>
+      <input type="text" id="phone" name="phone" required>
+      <label for="comments">Any Comments for Me?</label>
+      <textarea id="comments" rows="5" placeholder="Say Anything!"></textarea> 
+    <button type="submit">Send to Me!</button>
+    </form>
     <a href="#">Return to Top of Page</a>
 </body>
+<script>
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); 
+
+    const fd = new FormData(form);
+    const urlEncoded = new URLSearchParams(fd).toString(); 
+    fetch('http://localhost:3000/upload')
+
+
+
+  })
+</script>
 </html>
