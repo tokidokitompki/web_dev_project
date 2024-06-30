@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public'); // send HTML file on GET request
+    res.sendFile(__dirname + '/public/contact.html'); // send HTML file on GET request
 });
 
 app.post('/submit-form', (req, res) => {
